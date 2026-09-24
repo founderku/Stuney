@@ -1,5 +1,5 @@
-<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
 <title>Stuney Tracker</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20200%20200%22%20width%3D%22200%22%20height%3D%22200%22%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22bgGrad%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%22200%22%20y2%3D%22200%22%20gradientUnits%3D%22userSpaceOnUse%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%22%20stop-color%3D%22%233B7E5E%22%2F%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%221%22%20stop-color%3D%22%231F4C37%22%2F%3E%0A%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22leafGrad%22%20x1%3D%2260%22%20y1%3D%2240%22%20x2%3D%22140%22%20y2%3D%2275%22%20gradientUnits%3D%22userSpaceOnUse%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%22%20stop-color%3D%22%23DE9A4C%22%2F%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23C97324%22%2F%3E%0A%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%3C%2Fdefs%3E%0A%0A%20%20%3C%21--%20badge%20--%3E%0A%20%20%3Crect%20x%3D%220%22%20y%3D%220%22%20width%3D%22200%22%20height%3D%22200%22%20rx%3D%2246%22%20fill%3D%22url%28%23bgGrad%29%22%2F%3E%0A%0A%20%20%3C%21--%20sprout%20stem%20--%3E%0A%20%20%3Crect%20x%3D%2294.5%22%20y%3D%2246%22%20width%3D%2211%22%20height%3D%2242%22%20rx%3D%225.5%22%20fill%3D%22url%28%23leafGrad%29%22%2F%3E%0A%20%20%3C%21--%20sprout%20leaves%20--%3E%0A%20%20%3Cellipse%20cx%3D%2278%22%20cy%3D%2252%22%20rx%3D%2222%22%20ry%3D%2213%22%20fill%3D%22url%28%23leafGrad%29%22%20transform%3D%22rotate%28-34%2078%2052%29%22%2F%3E%0A%20%20%3Cellipse%20cx%3D%22122%22%20cy%3D%2252%22%20rx%3D%2222%22%20ry%3D%2213%22%20fill%3D%22url%28%23leafGrad%29%22%20transform%3D%22rotate%2834%20122%2052%29%22%2F%3E%0A%0A%20%20%3C%21--%20coin%20--%3E%0A%20%20%3Ccircle%20cx%3D%22100%22%20cy%3D%22128%22%20r%3D%2254%22%20fill%3D%22%23F6F7F3%22%2F%3E%0A%20%20%3Ccircle%20cx%3D%22100%22%20cy%3D%22128%22%20r%3D%2254%22%20fill%3D%22none%22%20stroke%3D%22%231F4C37%22%20stroke-opacity%3D%220.12%22%20stroke-width%3D%225%22%2F%3E%0A%0A%20%20%3C%21--%20S%20monogram%20--%3E%0A%20%20%3Cpath%20d%3D%22M118%2C108%0A%20%20%20%20%20%20%20%20%20%20%20a17%2C17%200%201%200%20-17%2C17%0A%20%20%20%20%20%20%20%20%20%20%20a17%2C17%200%201%201%20-17%2C17%22%0A%20%20%20%20%20%20%20%20fill%3D%22none%22%20stroke%3D%22%232F6B4F%22%20stroke-width%3D%2212%22%0A%20%20%20%20%20%20%20%20stroke-linecap%3D%22round%22%2F%3E%0A%3C%2Fsvg%3E%0A">
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
 
@@ -46,6 +46,7 @@
   button{font-family:inherit;}
 
   .app{max-width:480px; margin:0 auto; height:100%; display:flex; flex-direction:column;}
+  .app[hidden]{display:none!important;}
 
   /* ---------- topbar ---------- */
   .topbar{
@@ -288,10 +289,49 @@
   .btn-ghost{background:var(--paper); color:var(--ink-soft); border:1px solid var(--line);}
   .btn-danger{background:var(--danger); color:#fff;}
 
+  /* ---------- onboarding (name capture, not a login) ---------- */
+  .onboard-wrap{
+    max-width:400px; margin:0 auto; min-height:100%; display:flex; flex-direction:column;
+    justify-content:center; padding-block:32px;
+  }
+  .onboard-logo{width:76px; height:76px; margin:0 auto 18px; display:block;}
+  .onboard-wrap h1{font-family:'Fraunces',serif; font-size:24px; font-weight:600; text-align:center; margin:0 0 6px;}
+  .onboard-wrap p{color:var(--ink-soft); font-size:13.5px; text-align:center; margin:0 0 24px;}
+  .onboard-card{background:var(--surface); border:1px solid var(--line); border-radius:var(--radius-lg); padding:22px; box-shadow:var(--shadow);}
+  .onboard-wrap[hidden]{display:none!important;}
+
   @media (prefers-reduced-motion: reduce){ *{transition:none!important; animation:none!important;} }
 </style>
 
-<div class="app">
+<div class="onboard-wrap" id="onboardScreen" hidden>
+  <svg class="onboard-logo" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Logo Stuney Tracker">
+    <defs>
+      <linearGradient id="ob-bg" x1="0" y1="0" x2="200" y2="200" gradientUnits="userSpaceOnUse">
+        <stop offset="0" stop-color="#3B7E5E"/><stop offset="1" stop-color="#1F4C37"/>
+      </linearGradient>
+      <linearGradient id="ob-leaf" x1="60" y1="40" x2="140" y2="75" gradientUnits="userSpaceOnUse">
+        <stop offset="0" stop-color="#DE9A4C"/><stop offset="1" stop-color="#C97324"/>
+      </linearGradient>
+    </defs>
+    <rect x="0" y="0" width="200" height="200" rx="46" fill="url(#ob-bg)"/>
+    <rect x="94.5" y="46" width="11" height="42" rx="5.5" fill="url(#ob-leaf)"/>
+    <ellipse cx="78" cy="52" rx="22" ry="13" fill="url(#ob-leaf)" transform="rotate(-34 78 52)"/>
+    <ellipse cx="122" cy="52" rx="22" ry="13" fill="url(#ob-leaf)" transform="rotate(34 122 52)"/>
+    <circle cx="100" cy="128" r="54" fill="#F6F7F3"/>
+    <circle cx="100" cy="128" r="54" fill="none" stroke="#1F4C37" stroke-opacity="0.12" stroke-width="5"/>
+    <path d="M118,108 a17,17 0 1 0 -17,17 a17,17 0 1 1 -17,17" fill="none" stroke="#2F6B4F" stroke-width="12" stroke-linecap="round"/>
+  </svg>
+  <h1>Stuney Tracker</h1>
+  <p>Siapa nama kamu? Biar tampilannya lebih personal.</p>
+  <div class="onboard-card">
+    <form id="onboardForm">
+      <div class="field"><label for="onboardName">Nama Panggilan</label><input id="onboardName" type="text" required placeholder="Contoh: Adinda" maxlength="30"></div>
+      <button type="submit" class="btn btn-primary" style="width:100%;">Mulai Catat</button>
+    </form>
+  </div>
+</div>
+
+<div class="app" id="app" hidden>
   <header class="topbar" id="topbar"></header>
 
   <main class="content">
@@ -320,7 +360,7 @@
 
   /* ============ DATA LAYER ============ */
   var STORAGE_KEY = "stuney_tracker_v1";
-  var USER_NAME = "Adinda";
+  var NAME_KEY = "stuney_user_name";
 
   var CATS_EXPENSE = [
     {id:"makanan", name:"Makanan", icon:"🍜", color:"var(--amber)"},
@@ -415,6 +455,13 @@
   }
 
   var DATA = load();
+
+  function getUserName(){
+    try{ return localStorage.getItem(NAME_KEY) || "Kamu"; }catch(e){ return "Kamu"; }
+  }
+  function setUserName(name){
+    try{ localStorage.setItem(NAME_KEY, name); }catch(e){}
+  }
 
   /* ============ DERIVED STATS ============ */
   function monthKey(iso){ return iso.slice(0,7); }
@@ -523,7 +570,7 @@
     var lvl = levelInfo();
     if(state.tab==="home"){
       el.innerHTML =
-        '<div class="greet"><span class="hi">Halo,</span><span class="name">'+USER_NAME+' 👋</span></div>'+
+        '<div class="greet"><span class="hi">Halo,</span><span class="name">'+getUserName()+' 👋</span></div>'+
         '<div class="level-chip"><span class="flame">🔥</span><span class="streak-n">'+streak.count+'</span>'+
         '<span class="lvl-label">'+lvl.name+'</span></div>';
     } else {
@@ -828,10 +875,16 @@
       '<span style="font-weight:800;">'+fmtIDR(DATA.budget.monthly)+'</span></div>'+
       '<button class="btn btn-ghost" id="editBudgetBtn" style="width:100%;margin-top:12px;">Ubah Anggaran</button></div>';
 
+    html += '<div class="section-label">Akun</div>';
+    html += '<div class="card"><div class="row"><span class="muted" style="font-size:13px;">Nama Panggilan</span>'+
+      '<span style="font-weight:800;">'+getUserName()+'</span></div>'+
+      '<button class="btn btn-ghost" id="editNameBtn" style="width:100%;margin-top:12px;">Ubah Nama</button></div>';
+
     html += '<button class="reset-btn" id="resetAllBtn">Hapus Semua Data</button>';
 
     document.getElementById("view-profile").innerHTML = html;
     document.getElementById("editBudgetBtn").addEventListener("click", openBudgetModal);
+    document.getElementById("editNameBtn").addEventListener("click", openNameModal);
     document.getElementById("resetAllBtn").addEventListener("click", function(){
       if(confirm("Yakin ingin menghapus semua data transaksi, target, dan anggaran? Tindakan ini tidak bisa dibatalkan.")){
         DATA = {seeded:false, transactions:[], goals:[], budget:{monthly:0}};
@@ -949,6 +1002,21 @@
     });
   }
 
+  function openNameModal(){
+    sheet.innerHTML =
+      '<div class="modal-title">Ubah Nama Panggilan</div>'+
+      '<div class="field"><label for="nameEdit">Nama Panggilan</label><input id="nameEdit" type="text" value="'+getUserName()+'" maxlength="30"></div>'+
+      '<div class="modal-actions"><button class="btn btn-ghost" id="nameCancel">Batal</button><button class="btn btn-primary" id="nameSave">Simpan</button></div>';
+    openModal();
+    document.getElementById("nameCancel").addEventListener("click", closeModal);
+    document.getElementById("nameSave").addEventListener("click", function(){
+      var name = document.getElementById("nameEdit").value.trim();
+      if(!name){ alert("Nama tidak boleh kosong."); return; }
+      setUserName(name);
+      closeModal(); renderAll();
+    });
+  }
+
   document.getElementById("fabAdd").addEventListener("click", openTxModal);
 
   /* Goal-view needs its own add button injected into the view */
@@ -979,10 +1047,32 @@
     renderView(state.tab);
   }
 
-  document.getElementById("fabAdd").style.display = "flex";
-  renderAll();
+  /* ============ ONBOARDING BOOT ============ */
+  var onboardScreen = document.getElementById("onboardScreen");
+  var appEl = document.getElementById("app");
+
+  function startApp(){
+    onboardScreen.hidden = true;
+    appEl.hidden = false;
+    document.getElementById("fabAdd").style.display = "flex";
+    renderAll();
+  }
+
+  document.getElementById("onboardForm").addEventListener("submit", function(e){
+    e.preventDefault();
+    var name = document.getElementById("onboardName").value.trim();
+    if(!name) return;
+    setUserName(name);
+    startApp();
+  });
+
+  var existingName = null;
+  try{ existingName = localStorage.getItem(NAME_KEY); }catch(e){ existingName = null; }
+  if(existingName){
+    startApp();
+  } else {
+    onboardScreen.hidden = false;
+  }
 
 })();
 </script>
-
-</body></html>
